@@ -24,11 +24,11 @@ juce_add_plugin(ColaTune
     NEEDS_MIDI_OUTPUT FALSE
     COPY_PLUGIN_AFTER_BUILD FALSE)
 
-juce_add_binary_data(ColaAssets SOURCES Assets/youngcola.png)
+juce_add_binary_data(ColaAssets SOURCES youngcola.png)
 
 target_sources(ColaTune PRIVATE
-    Source/PluginProcessor.cpp
-    Source/PluginEditor.cpp)
+    PluginProcessor.cpp
+    PluginEditor.cpp)
 
 target_compile_definitions(ColaTune PUBLIC
     JUCE_WEB_BROWSER=0
